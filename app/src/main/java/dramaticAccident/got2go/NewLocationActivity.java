@@ -18,7 +18,7 @@ public class NewLocationActivity extends AppCompatActivity {
         String message = intent.getStringExtra(MapsActivity.LOCATION);
 
         // Capture the layout's TextView and set the string as its text
-        TextView textView = findViewById(R.id.textView);
-        textView.setText(message);
+        TextView location = findViewById(R.id.location);
+        location.setText(message);
     }
 }

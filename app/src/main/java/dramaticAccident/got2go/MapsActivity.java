@@ -3,12 +3,15 @@ package dramaticAccident.got2go;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
-import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.view.View;
 
@@ -37,14 +40,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
     }
 
-//    /** Called when the user taps the NewLocation button */
-//    public void newLocation(View view) {
-//        Intent intent = new Intent(this, NewLocationActivity.class);
-//        String message = fusedLocationClient.getLastLocation().toString();
-//        mMap.addMarker();
-//        intent.putExtra(LOCATION, message);
-//        startActivity(intent);
-//    }
+    /** Called when the user taps the NewLocation button */
+    public void newLocation(View view) {
+        String message = "";
+        Intent intent = new Intent(this, NewLocationActivity.class);
+        if ( ContextCompat.checkSelfPermission( this, android.Manifest.permission.ACCESS_FINE_LOCATION ) == PackageManager.PERMISSION_GRANTED ) {
+            LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+            Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            double longitude = location.getLongitude();
+            double latitude = location.getLatitude();
+            mMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(latitude, longitude))
+                    .title("Hello world"));
+            message += latitude + " " + longitude;
+        }
+        intent.putExtra(LOCATION, message);
+        startActivity(intent);
+    }
 
     @Override
     public void onMapReady(GoogleMap map) {
