@@ -1,14 +1,17 @@
 package dramaticAccident.got2go;
 
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.GoogleMap.OnMyLocationButtonClickListener;
-import com.google.android.gms.maps.GoogleMap.OnMyLocationClickListener;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
 import android.os.Bundle;
+import android.view.View;
+
 
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -21,6 +24,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     // this request code is used to distinguish system permission dialogs
     private static final int MY_PERMISSIONS_REQUEST_FINE_LOCATION = 1;
 
+    public static final String LOCATION = "dramaticAccident.got2go.MESSAGE";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +36,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
+
+//    /** Called when the user taps the NewLocation button */
+//    public void newLocation(View view) {
+//        Intent intent = new Intent(this, NewLocationActivity.class);
+//        String message = fusedLocationClient.getLastLocation().toString();
+//        mMap.addMarker();
+//        intent.putExtra(LOCATION, message);
+//        startActivity(intent);
+//    }
 
     @Override
     public void onMapReady(GoogleMap map) {
