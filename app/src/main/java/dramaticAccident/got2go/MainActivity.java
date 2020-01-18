@@ -25,4 +25,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /** Called when the user taps the Map button */
+    public void goToMap(View map) {
+        Intent mapIntent = new Intent(this, MapsActivity.class);
+        startActivity(mapIntent);
+    }
+
 }
