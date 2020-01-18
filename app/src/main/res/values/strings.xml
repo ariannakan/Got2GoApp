@@ -3,5 +3,9 @@
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
     <string name="title_activity_maps">Map</string>
+<<<<<<< HEAD
     <string name="title_activity_rating">RatingActivity</string>
+=======
+    <string name="new_marker">Add New Location</string>
+>>>>>>> 4b15f9b4977cbcd3b993f7afbeb2d4ce9b0c1bcc
 </resources>
