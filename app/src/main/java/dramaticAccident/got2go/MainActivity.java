@@ -14,7 +14,6 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     DatabaseHelper TOILETS;
-    DatabaseHelper2 RATINGS;
 
     public static final String EXTRA_MESSAGE = "dramaticAccident.got2go.MESSAGE";
 
@@ -23,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TOILETS = new DatabaseHelper(this);
-        RATINGS = new DatabaseHelper2(this);
     }
 
     /** Called when the user taps the Send button */

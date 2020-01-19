@@ -1,5 +1,6 @@
 package dramaticAccident.got2go;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -33,5 +34,14 @@ public class DatabaseHelper2 extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS "+RatingDB);
         onCreate(db);
+    }
+
+    public boolean addRating(String comment, Integer rating){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentvalues = new ContentValues();
+        contentvalues.put(Comment, comment);
+        contentvalues.put(Rating, rating);
+        long result = db.insert(RatingTB, null, contentvalues);
+        return !(result == -1);
     }
 }
