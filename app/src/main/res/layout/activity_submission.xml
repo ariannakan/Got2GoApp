@@ -20,9 +20,9 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="410dp"
-        android:layout_height="200dp"
-        android:layout_marginBottom="324dp"
+        android:layout_width="381dp"
+        android:layout_height="155dp"
+        android:layout_marginBottom="336dp"
         android:background="@drawable/back"
         android:gravity="center"
         android:text="Submission Recorded!"
@@ -31,7 +31,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.appbar.AppBarLayout

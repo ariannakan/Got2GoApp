@@ -128,11 +128,14 @@
             android:id="@+id/textView4"
             android:layout_width="241dp"
             android:layout_height="38dp"
+            android:layout_marginBottom="440dp"
             android:gravity="center"
             android:text="Cleanliness"
             android:textSize="24sp"
-            tools:layout_editor_absoluteX="87dp"
-            tools:layout_editor_absoluteY="253dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
