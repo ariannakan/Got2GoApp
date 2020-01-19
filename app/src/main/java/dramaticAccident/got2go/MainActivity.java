@@ -41,4 +41,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(mapIntent);
     }
 
+    /** Called when the user taps the Map button */
+    public void goToRating(View map) {
+        Intent mapIntent = new Intent(this, RatingActivity.class);
+        startActivity(mapIntent);
+    }
+
 }
