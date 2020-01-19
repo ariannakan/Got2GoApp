@@ -1,26 +1,26 @@
 package dramaticAccident.got2go;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
+    //DatabaseHelper TOILETS;
+    //DatabaseHelper2 RATINGS;
     DatabaseHelper TOILETS;
 
     public static final String EXTRA_MESSAGE = "dramaticAccident.got2go.MESSAGE";
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //TOILETS = new DatabaseHelper(this);
+        //RATINGS = new DatabaseHelper2(this);
         TOILETS = new DatabaseHelper(this);
     }
 
@@ -37,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
     public void goToMap(View map) {
         Intent mapIntent = new Intent(this, MapsActivity.class);
         startActivity(mapIntent);
+    }
+
+    /** Called when the user taps on User Agreement */
+    public void pop(View view) {
+        Intent i = new Intent(getApplicationContext(), PopActivity.class);
+        startActivity(i);
     }
 
     /** Called when the user taps the Map button */

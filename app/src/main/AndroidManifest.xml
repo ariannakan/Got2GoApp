@@ -19,6 +19,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".CreateActivity"></activity>
         <activity android:name=".SubmissionActivity" />
+        <activity android:name=".PopActivity"
+            android:theme="@style/AppTheme.PopUp"
+            ></activity>
         <activity android:name=".RatingActivity" />
         <activity android:name=".NewLocationActivity" />
         <!--
