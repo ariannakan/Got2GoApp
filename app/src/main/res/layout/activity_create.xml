@@ -61,7 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="Create Bathroom"
+                android:text="Add Bathroom"
                 android:textColor="#FFFFFF"
                 android:textSize="36sp"
                 android:textStyle="bold" />
