@@ -18,7 +18,7 @@
             android:id="@+id/textView5"
             android:layout_width="241dp"
             android:layout_height="38dp"
-            android:layout_marginBottom="296dp"
+            android:layout_marginBottom="316dp"
             android:gravity="center"
             android:text="Room / Space"
             android:textSize="24sp"
@@ -43,19 +43,19 @@
             style="@style/Widget.AppCompat.SeekBar.Discrete"
             android:layout_width="290dp"
             android:layout_height="38dp"
-            android:layout_marginBottom="256dp"
+            android:layout_marginBottom="276dp"
             android:max="10"
             android:progress="5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent" />
 
         <RatingBar
             android:id="@+id/ratingBar3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="452dp"
+            android:layout_marginBottom="516dp"
             android:numStars="5"
             android:rating="0"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -72,22 +72,21 @@
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.339" />
+            app:layout_constraintVertical_bias="0.148" />
 
         <SeekBar
             android:id="@+id/seekBar2"
             style="@style/Widget.AppCompat.SeekBar.Discrete"
             android:layout_width="290dp"
             android:layout_height="38dp"
-            android:layout_marginBottom="352dp"
+            android:layout_marginBottom="400dp"
             android:max="10"
             android:progress="5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent" />
 
         <RadioGroup
@@ -130,13 +129,23 @@
             android:layout_width="480dp"
             android:layout_height="190dp"
             android:layout_marginBottom="581dp"
-            android:text="Bathroom Details"
             android:background="@drawable/back"
+            android:text="Bathroom Details"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="241dp"
+            android:layout_height="38dp"
+            android:gravity="center"
+            android:text="Cleanliness"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="87dp"
+            tools:layout_editor_absoluteY="253dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -173,17 +182,6 @@
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="241dp"
-        android:layout_height="38dp"
-        android:layout_marginBottom="380dp"
-        android:gravity="center"
-        android:text="Cleanliness"
-        android:textSize="24sp"
-        app:layout_anchor="@+id/constraintLayout"
-        app:layout_anchorGravity="center" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
