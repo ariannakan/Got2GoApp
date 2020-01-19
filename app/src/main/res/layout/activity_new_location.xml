@@ -121,20 +121,6 @@
             android:textSize="18sp" />
     </RadioGroup>
 
-    <RadioButton
-        android:id="@+id/radioButton3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Yes"
-        android:textSize="18sp" />
-
-    <RadioButton
-        android:id="@+id/radioButton4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="No"
-        android:textSize="18sp" />
-
     <Button
         android:id="@+id/button6"
         android:layout_width="183dp"
